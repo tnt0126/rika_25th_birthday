@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>誕生日クイズ | 怪盗直之の挑戦状</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>怪盗直之からの挑戦状！</h1>
+    <div class="container">
+        <p>さあ、問題は解けたかな？</p>
+        <p><strong>下に解答を入力してくれ！</strong></p>
+        <input type="number" id="userAnswer" placeholder="合計を入力してください">
+        <button onclick="checkAnswer()">答え合わせ</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = 39;
+            const userAnswer = parseInt(document.getElementById("userAnswer").value);
+            const resultDiv = document.getElementById("result");
+
+            if (userAnswer === correctAnswer) {
+                resultDiv.innerHTML = "「大正解！🎉 さすが、名探偵大久保👏 改めてお誕生日おめでとう！そして、生まれてきてくれて本当にThank youな！✨ 25歳も、どんなことがあっても一緒に笑って最高の年にしよう！！社会人結構辛いときや落ち込むときもあるけど、辛いときは俺もそばにおりますのでご安心を😉。りかぴんのキラッキラ✨️の笑顔を見られるよう、これから全力で笑かして、励ましていく所存なので、たくさん遊んで、たまには泣いて、一緒に笑って前に進んでいけたらいいな！！25歳も最高の思い出をいっぱい作ろう！！🎂✨ まずは洋服！その次はスノボだね！最後に、特別な日に心からの『サンキュー！』を贈るよ。お誕生日おめでとう、りかぴん！」";
+            } else {
+                resultDiv.innerHTML = "残念…もう一度挑戦してみて！💪";
+            }
+        }
+    </script>
+</body>
+</html>
